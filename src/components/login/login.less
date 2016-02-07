@@ -1,0 +1,227 @@
+/*---------- start Login ----------*/
+
+.login_ {
+  &root {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: #7a9398;
+  }
+  &header {
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    z-index: 10;
+    &Logo {
+      display: block;
+      position: relative;
+      height: 100%;
+      width: 600px;
+      padding: 30px 0 0 160px;
+      box-sizing: border-box;
+      text-decoration: none;
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+      }
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100px;
+        width: 110px;
+        top: 24px;
+        left: 32px;
+        background: url("../../images/login/header_logo.png") no-repeat;
+        background-size: contain;
+      }
+    }
+    &Title {
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #f0f0f0;
+    }
+    &Description {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: #f0f0f0;
+    }
+  }
+  &contentMain {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top: 120px;
+    box-sizing: border-box;
+  }
+  &contentContainer {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    width: 100%;
+    overflow: auto;
+  }
+  &content {
+    position: absolute;
+    height: 400px;
+    width: 360px;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -180px;
+    &Title {
+      margin-bottom: 20px;
+      font-size: 36px;
+      font-weight: 400;
+      color: #f0f0f0;
+      line-height: 1;
+      text-align: center;
+    }
+    &FieldBox {
+      position: relative;
+      height: 50px;
+      width: 100%;
+      margin-bottom: 10px;
+      &Dialpad {
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 32px;
+          width: 32px;
+          top: 9px;
+          left: 10px;
+          background: url("../../images/login/ic_dialpad_white_48dp_2x.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      &Lock {
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 32px;
+          width: 32px;
+          top: 9px;
+          left: 10px;
+          background: url("../../images/login/ic_lock_outline_white_48dp_2x.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      input::-webkit-input-placeholder {
+        font-size: 26px;
+        font-weight: 400;
+        color:    #dde1e2;
+        line-height: 1.2;
+        opacity: .8;
+      }
+      input:-moz-placeholder {
+        font-size: 26px;
+        font-weight: 400;
+        color:    #dde1e2;
+        line-height: 1.2;
+        opacity: .8;
+      }
+      input::-moz-placeholder {
+        font-size: 26px;
+        font-weight: 400;
+        color:    #dde1e2;
+        line-height: 1.2;
+        opacity: .8;
+      }
+      input:-ms-input-placeholder {
+        font-size: 26px;
+        font-weight: 400;
+        color:    #dde1e2;
+        line-height: 1.2;
+        opacity: .8;
+      }
+    }
+    &Field {
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 5px 15px 5px 50px;
+      background: #a1c0c6;
+      border: none;
+      color: #dde1e2;
+      box-sizing: border-box;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
+  &contentBox {
+    position: relative;
+    height: 50px;
+    margin: 20px 0 10px;
+    font-size: 0;
+    &Remember {
+      display: inline-block;
+      position: relative;
+      padding: 5px 0 5px 32px;
+      font-size: 20px;
+      font-weight: 400;
+      color: #f1f1f1;
+      cursor: pointer;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        top: 7px;
+        left: 0;
+        border: 2px solid #cccccc;
+      }
+      &Input:checked + &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        top: 10px;
+        left: 3px;
+        background: #a1c0c6;
+      }
+      &Input {
+        position: absolute;
+        left: -10000px;
+      }
+    }
+    &Link {
+      display: inline-block;
+      height: 100%;
+      width: 50%;
+      padding: 5px 0;
+      vertical-align: top;
+      color: #f1f1f1;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: right;
+      text-decoration: none;
+      &:hover, &:active, &:focus {
+        color: #f1f1f1;
+        text-decoration: none;
+      }
+    }
+    &Submit {
+      display: block;
+      height: 50px;
+      width: 100%;
+      background: #4a5f63;
+      border: none;
+      color: #f1f1f1;
+      font-size: 20px;
+    }
+  }
+  &contentInputBox {
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    vertical-align: top;
+  }
+}
+
+/*---------- end Login ----------*/

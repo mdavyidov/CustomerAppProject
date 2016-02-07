@@ -1,0 +1,19 @@
+.login_root
+  .login_header
+    a(href="#").login_headerLogo
+      .login_headerTitle AutoRepair Cloud
+      .login_headerDescription Track your repairs and services
+  .login_contentMain
+    .login_contentContainer
+      .login_content
+        .login_contentTitle Member Login
+        .login_contentFieldBox.login_contentFieldBoxDialpad
+          input(type="text", placeholder="Phone").login_contentField
+        .login_contentFieldBox.login_contentFieldBoxLock
+          input(type="text", placeholder="Password").login_contentField
+        .login_contentBox
+          .login_contentInputBox
+            input(type="checkbox", id="remember").login_contentBoxRememberInput
+            label(for="remember").login_contentBoxRemember Remember me
+          a(href="#").login_contentBoxLink Forgot password?
+        button(type="submit").login_contentBoxSubmit Sign In

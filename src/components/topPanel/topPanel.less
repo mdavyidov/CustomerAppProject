@@ -1,0 +1,36 @@
+/*---------- start topPanel ----------*/
+
+.topPanel_ {
+  &root {
+    display: none;
+    position: absolute;
+    height: 56px;
+    top: 58px;
+    left: 0;
+    right: 0;
+    padding: 0 15px 0 107px;
+    background: #8a8a8a;
+    border: 1px solid #545456;
+    border-left: none;
+    text-align: justify;
+    box-sizing: border-box;
+    z-index: 10;
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 0;
+      width: 100%;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+  &box {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    vertical-align: top;
+    font-size: 0;
+  }
+}
+
+/*---------- end topPanel ----------*/

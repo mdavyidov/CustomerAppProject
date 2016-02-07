@@ -1,0 +1,19 @@
+extends ../components/shell/basic
+
+block root
+  .shell_root.topPanel_rootActive
+    .shell_header
+      include ../components/header/header
+    .topPanel_root
+      .topPanel_box
+        include ../components/breadcrumbs/breadcrumbs
+      .topPanel_box
+        .btn_root
+          a(href="#").btn_link.btn_linkSubmit Apply
+        .btn_root
+          a(href="#").btn_link.btn_linkCancel Cancel
+    .shell_container
+      .shell_sideMenu
+        include ../components/sideMenu/sideMenu
+      .shell_content
+        include ../components/repairRequest/repairRequest

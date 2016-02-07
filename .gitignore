@@ -1,0 +1,7 @@
+node_modules
+.idea
+design
+
+src/css/*.css
+src/html/*.html
+src/images/sprite

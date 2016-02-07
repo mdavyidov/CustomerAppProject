@@ -1,0 +1,66 @@
+/*---------- start shell ----------*/
+
+.shell_ {
+  &root {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  &header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 58px;
+    z-index: 30;
+  }
+  &container {
+    height: 100%;
+    width: 100%;
+    padding-top: 58px;
+    box-sizing: border-box;
+  }
+  &sideMenu {
+    position: absolute;
+    height: 100%;
+    width: 92px;
+    top: 0;
+    padding-top: 58px;
+    background: #636365;
+    box-sizing: border-box;
+    z-index: 20;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  &content {
+    height: 100%;
+    margin-left: 92px;
+    padding: 10px 15px 0;
+    background: #ffffff;
+    box-sizing: border-box;
+    overflow: auto;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.topPanel_rootActive {
+  .topPanel_root {
+    display: block;
+  }
+  .shell_ {
+    &container {
+      padding-top: 114px;
+    }
+  }
+}
+
+/*---------- end shell ----------*/

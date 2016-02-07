@@ -1,0 +1,417 @@
+/*---------- service ----------*/
+
+.service {
+  &_root {
+    height: 100%;
+    overflow: auto;
+  }
+  &_list{
+    position: relative;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    font-size: 0;
+  }
+  &_item {
+    position: relative;
+    min-height: 72px;
+    background: #f6f5f5;
+    border: 1px solid #b2b2b2;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1px 1px #a9a9a1;
+    font-size: 0;
+    margin-bottom: 5px;
+    &Detailed {
+      position: relative;
+      background: #f6f5f5;
+      border: 1px solid #b2b2b2;
+      border-radius: 2px;
+      box-shadow: inset 0 0 1px 1px #a9a9a1;
+      font-size: 0;
+      margin-bottom: 5px;
+    }
+    &Icon {
+      width: 70px;
+      height: 100%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px;
+      }
+      &Link {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
+      &Danger {
+        background: #ce7070;
+        &:before {
+          background: url("../../images/service/schedule_overdue.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      &Attention {
+        background: #ae9f4d;
+        &:before {
+          background: url("../../images/service/ic_alarm_white_48dp_2x.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      &Success {
+        background: #61a261;
+        &:before {
+          background: url("../../images/service/ic_alarm_white_48dp_2x.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      &UserService {
+        background: #3dbaba;
+        &:before {
+          background: url("../../images/service/service_request.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      &UserRepir {
+        background: #ba3dba;
+        &:before {
+          background: url("../../images/service/repair_request.png") no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  &_container {
+    margin-left: 70px;
+    display: block;
+    padding: 6px 10px;
+    box-sizing: border-box;
+  }
+  &_Name {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    &Service {
+      margin-bottom: 2px;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #4c4c4c;
+    }
+    &Type {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #878787;
+    }
+    &Options {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #878787;
+    }
+    &ServiceDetailed {
+      min-height: 70px;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #4c4c4c;
+      position: relative;
+      box-sizing: border-box;
+      padding: 0 5px 5px 0;
+      span {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background: url("../../images/service/ic_mode_edit_black_48dp_2x.png") no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    &Schedule {
+      display: block;
+      position: relative;
+      margin: 0 10px 0 94px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #4c4c4c;
+      &:before {
+        content: 'Schedule:';
+        display: block;
+        position: absolute;
+        height: 25px;
+        width: 94px;
+        padding-right: 10px;
+        top: 0;
+        left: -94px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: #878787;
+        text-align: right;
+        box-sizing: border-box;
+      }
+    }
+    &Status {
+      display: block;
+      position: relative;
+      margin: 0 10px 0 94px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #4c4c4c;
+      &:before {
+        content: 'Status:';
+        display: block;
+        position: absolute;
+        height: 25px;
+        width: 94px;
+        padding-right: 10px;
+        top: 0;
+        left: -94px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: #878787;
+        text-align: right;
+        box-sizing: border-box;
+      }
+    }
+  }
+  &_info {
+    display: inline-block;
+    width: 50%;
+    position: relative;
+    vertical-align: bottom;
+    &Side {
+      display: inline-block;
+      float: right;
+      width: 134px;
+      font-size: 0;
+      text-align: right;
+    }
+    &Edit {
+      display: inline-block;
+      height: 50px;
+      margin-left: 15px;
+      &link {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        width: 69px;
+        padding: 16px 5px 2px 30px;
+        top: 0px;
+        right: 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #4c4c4c;
+        text-decoration: none;
+        line-height: 1.2;
+        vertical-align: top;
+        box-sizing: border-box;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 30px;
+          width: 30px;
+          top: 12px;
+          left: 0;
+          background: url("../../images/repReq/ic_mode_edit_black_48dp_2x.png") no-repeat;
+          background-size: contain;
+        }
+        &:hover ,&:active ,&:focus {
+          color: #4c4c4c;
+          text-decoration: none;
+        }
+      }
+    }
+    &Photo {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      height: 50px;
+      width: 50px;
+      margin-top: 3px;
+      background: url("../../images/service/ic_insert_photo_black_48dp_2x.png") no-repeat;
+      background-size: cover;
+      &Link {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &Cars {
+      font-size: 18px;
+      color: #4c4c4c;
+      font-weight: 600;
+      line-height: 1.4;
+      padding-left: 35px;
+      position: relative;
+      margin-bottom: 8px;
+      margin-right: 134px;
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        background: url("../../images/service/ic_drive_eta_48pt_2x.png") no-repeat;
+        background-size: contain;
+      }
+    }
+    &Mileage {
+      font-size: 18px;
+      color: #4c4c4c;
+      font-weight: 600;
+      line-height: 1.4;
+      padding-left: 35px;
+      position: relative;
+      margin-right: 134px;
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        background: url("../../images/service/ic_timelapse_black_48dp_2x.png") no-repeat;
+        background-size: contain;
+      }
+    }
+    &SideDetailed {
+      display: inline-block;
+      float: right;
+      width: 69px;
+      font-size: 0;
+      text-align: right;
+      .service_infoEdit {
+        margin-left: 0;
+      }
+    }
+    &CarsDetailed {
+      display: block;
+      position: relative;
+      margin: 0 74px 0 94px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #4c4c4c;
+      box-sizing: border-box;
+      &:before {
+        content: 'Due:';
+        display: block;
+        position: absolute;
+        height: 25px;
+        width: 94px;
+        padding-right: 10px;
+        top: 0;
+        left: -94px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: #878787;
+        text-align: right;
+        box-sizing: border-box;
+      }
+    }
+    &MileageDetailed {
+      display: block;
+      position: relative;
+      margin: 0 74px 0 94px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #4c4c4c;
+      box-sizing: border-box;
+      &:before {
+        content: 'Vehicle:';
+        display: block;
+        position: absolute;
+        height: 25px;
+        width: 94px;
+        padding-right: 10px;
+        top: 0;
+        left: -94px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: #878787;
+        text-align: right;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .service {
+    &_info {
+      &Side {
+        width: 69px;
+        text-align: left;
+      }
+      &Edit {
+        margin-left: 0;
+      }
+      &Photo {
+        margin-top: 4px;
+      }
+      &Cars {
+        margin-right: 69px;
+      }
+      &Mileage {
+        margin-right: 69px;
+      }
+      &CarsDetailed {
+        margin: 0 74px 0 10px;
+        padding-top: 25px;
+        &:before {
+          padding: 0;
+          top: 4px;
+          left: 0;
+          text-align: left;
+        }
+      }
+      &MileageDetailed {
+        margin: 0 74px 0 10px;
+        padding-top: 25px;
+        &:before {
+          padding: 0;
+          top: 4px;
+          left: 0;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+/*---------- service ----------*/

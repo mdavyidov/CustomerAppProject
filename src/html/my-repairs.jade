@@ -1,0 +1,12 @@
+extends ../components/shell/basic
+
+block root
+  .shell_root.topPanel_rootActive
+    .shell_header
+      include ../components/header/header
+    include ../components/topPanel/topPanel
+    .shell_container
+      .shell_sideMenu
+        include ../components/sideMenu/sideMenu
+      .shell_content
+        include ../components/repairs/repairs

@@ -1,0 +1,303 @@
+/*---------- start vehicle ----------*/
+
+.vehicle {
+  &_root {
+    height: 100%;
+    overflow: auto;
+  }
+  &_list {
+    position: relative;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    font-size: 0;
+    text-align: justify;
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  &_itemRepair {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    background: #edeaf5;
+    border: 1px solid #b2b2b2;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1px 1px #a9a9a1;
+  }
+  &_bottomStateRepair {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    a {
+      height: 42px;
+      padding-left: 40px;
+      padding-top: 8px;
+      font-size: 18px;
+      color: #878787;
+      font-weight: 600;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      box-sizing: border-box;
+      &:hover, &:visited, &:active, &:focus {
+        text-decoration: none;
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        height: 35px;
+        width: 35px;
+        background: url("../../images/vehicle/ic_info_outline_black_48dp_2x.png") no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  &_itemOverdue {
+    //height: 168px;
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    background: #f5eaea;
+    border: 1px solid #b2b2b2;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1px 1px #a9a9a1;
+  }
+  &_bottomStateOverdue {
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    a {
+      padding: 0 30px 0 36px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #888888;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      line-height: 1.2;
+      &:hover, &:visited, &:active, &:focus {
+        text-decoration: none;
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        height: 30px;
+        width: 30px;
+        background: url("../../images/vehicle/ic_warning_black_48dp_2x.png") no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  &_item {
+    //height: 168px;
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    background: #eaf5ea;
+    border: 1px solid #b2b2b2;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 1px 1px #a9a9a1;
+    &Link {
+      text-decoration: none;
+      &:hover, &:visited, &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+  &_top {
+    height: 36px;
+    width: 100%;
+    position: relative;
+    &Name {
+      font-size: 22px;
+      color: #4c4c4c;
+      font-weight: 600;
+      padding: 0 36px 0 39px;
+      display: block;
+      box-sizing: border-box;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        vertical-align: top;
+        top: 0;
+        left: 4px;
+        height: 30px;
+        width: 28px;
+        background: url("../../images/vehicle/ic_drive_eta_48pt_2x.png") no-repeat;
+        background-size: contain;
+      }
+    }
+    &Mark {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 31px;
+      width: 31px;
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        vertical-align: top;
+        top: 0;
+        right: 0;
+        height: 31px;
+        width: 31px;
+        background: url("../../images/vehicle/mark.png") no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  &_content {
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      color: #878787;
+      padding: 5px 0 0 0;
+      margin: 0;
+      text-transform: uppercase;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  &_bottom {
+    &State {
+      display: inline-block;
+      width: 50%;
+    }
+  }
+  &_bottom {
+    margin-top: 30px;
+    &Info {
+      display: inline-block;
+      position: relative;
+      width: 50%;
+      padding-top: 2px;
+      text-align: right;
+      vertical-align: top;
+      &List {
+        position: relative;
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+        font-size: 0;
+      }
+      &Favorites {
+        display: inline-block;
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+        background: url("../../images/vehicle/ic_star_border_black_48dp_2x.png") no-repeat;
+        background-size: cover;
+        &Link {
+          display: block;
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          &:hover, &:visited, &:active, &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+      &Weather {
+        display: inline-block;
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+        background: url("../../images/vehicle/ic_cloud_queue_black_48dp_2x.png") no-repeat;
+        background-size: cover;
+        &Link {
+          display: block;
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          &:hover, &:visited, &:active, &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+      &Calendar {
+        display: inline-block;
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+        background: url("../../images/vehicle/ic_event_black_48dp_2x.png") no-repeat;
+        background-size: cover;
+        &Link {
+          display: block;
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          &:hover, &:visited, &:active, &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+      &Rest {
+        display: inline-block;
+        margin-left: 10px;
+        height: 40px;
+        width: 40px;
+        background: url("../../images/vehicle/ic_more_horiz_black_48dp_2x.png") no-repeat;
+        background-size: cover;
+        &Link {
+          display: block;
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          &:hover, &:visited, &:active, &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .vehicle_ {
+    &bottom {
+      &State {
+        display: block;
+        width: auto;
+        height: 42px;
+        &Repair {
+          display: block;
+          width: auto;
+        }
+      }
+      &Repair {
+        display: block;
+        width: auto;
+      }
+      &Info {
+        display: block;
+        width: auto;
+      }
+    }
+  }
+}
+
+/*---------- end shell ----------*/
